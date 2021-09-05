@@ -59,9 +59,10 @@ form div label{
   margin: 15px;
 }
 form > div > input[type=text]{
-  padding: 10px 20px;
+  padding: 8px 20px;
   background-color: white;
   background-position: 10px 30px;
+  color: black;
   width: 50%;
   background-repeat: no-repeat;
   padding-left: 40px;
