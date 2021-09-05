@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+  margin: 0px;
+}
+a{
+  color: white
+}
+.container {
+  min-height: 200vh;
+  padding: 70px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color:  rgba(17, 24, 39, 0.9);
+}
+.inner h1{
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+.inner h3{
+  color: white;
+  text-align: center;
+  font-size: 2.1rem;
+  margin-bottom: 9px;
+}
+.inner h4{
+  color: white;
+  text-align: center;
+  font-size: 2.0rem;
+  margin-bottom: 9px;
+}
+.connect{
+  padding: 20px 40px;
+  background-color: #c2ae89;
+  color: white;
+  cursor: pointer;
+  align-self: end;
+  justify-self: center;
+  text-align: center;
+  margin: 10px 250px;
+}
+.form{
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 50px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+form div label{
+  color: white;
+  font-size: 25px;
+  margin: 15px;
+}
+.desc{
+  padding: 10px 20px;
+  background-color: none;
+  border-radius: 10px;
+  color: black;
+}
+form div input{
+  color: white;
+}
+form input{
+  margin-top: 25px;
+}
+.mint{
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  background-color: #c2ae89;
+  color: white;
+  cursor: pointer;
+  align-self: end;
+  justify-self: center;
+  text-align: center;
+  margin: 10px 280px;
+}

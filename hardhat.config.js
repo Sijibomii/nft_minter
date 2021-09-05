@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require('dotenv').config()
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
 
@@ -6,8 +7,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     console.log(account.address);
   }
 });
-const key = process.env('private_key');
-const projectId= process.env('projectId');
+const key = process.env.private_key;
+const projectId= process.env.projectId;
 module.exports = {
   networks:{
     hardhat:{

@@ -1,0 +1,2 @@
+
+export const minterAddress="0x6f8e3eA66b6bB5Bdc996958df7D005C78C16d338";

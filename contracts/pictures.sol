@@ -2,21 +2,18 @@
 pragma solidity ^0.8.4;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
-
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "hardhat/console.sol";
-contract NFT_Minter is Initializable ,ERC721 {
+contract NFT_Minter is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
-    address tokenOwner;
 
-  constructor (address owner) ERC721("Nft with pictures", "NFPI"){
-    tokenOwner=owner;
-  }
+      constructor () ERC721("Nft with pictures", "NFPI"){}
 
-  function mint(address to, string memory tokenURI) public returns (uint256) {
+     function createNFT(string memory tokenURI) public returns (uint) {
         _tokenIds.increment();
         uint256 newItemId = _tokenIds.current();
-        _mint(to, newItemId);
+        _mint(msg.sender, newItemId);
         _setTokenURI(newItemId, tokenURI);
         return newItemId;
     }
