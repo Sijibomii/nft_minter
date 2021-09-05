@@ -111,13 +111,13 @@ function App() {
             </div>
           </form>
          </div>
-         {
+         <button className="mint" onClick={mintNft}>Mint </button>
+       </div>
+       {
           fileUrl && (
             <img className="rounded mt-4" width="350" src={fileUrl} />
           )
         }
-         <button className="mint" onClick={mintNft}>Mint </button>
-       </div>
      </div>
     </div>
   );

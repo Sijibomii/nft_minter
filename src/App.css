@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 *{
   margin: 0px;
 }
@@ -18,19 +16,20 @@ a{
 }
 .inner h1{
   color: white;
-  font-size: 3.5rem;
+  font-size: 2.7rem;
   margin-bottom: 10px;
+  text-align: center;
 }
 .inner h3{
   color: white;
   text-align: center;
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   margin-bottom: 9px;
 }
 .inner h4{
   color: white;
   text-align: center;
-  font-size: 2.0rem;
+  font-size: 1.2rem;
   margin-bottom: 9px;
 }
 .connect{
@@ -41,7 +40,9 @@ a{
   align-self: end;
   justify-self: center;
   text-align: center;
-  margin: 10px 250px;
+  border: none;
+  text-decoration: none;
+  margin: 10px 25px;
 }
 .form{
   padding: 40px;
@@ -57,26 +58,52 @@ form div label{
   font-size: 25px;
   margin: 15px;
 }
-.desc{
+form > div > input[type=text]{
   padding: 10px 20px;
-  background-color: none;
-  border-radius: 10px;
-  color: black;
+  background-color: white;
+  background-position: 10px 30px;
+  width: 50%;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  border: none;
 }
-form div input{
-  color: white;
+form > div > input[type=text]:focus {
+  border: 3px solid #555!important;
+ 
 }
 form input{
+  color:white;
   margin-top: 25px;
 }
+
 .mint{
   padding: 20px 40px;
   font-size: 1.5rem;
+  border: none;
+  text-decoration: none;
   background-color: #c2ae89;
   color: white;
   cursor: pointer;
   align-self: end;
   justify-self: center;
   text-align: center;
-  margin: 10px 280px;
+  margin: 10px 28px;
+}
+@media only screen and (max-width: 600px) {
+  .inner h1{
+    font-size: 2.2rem;
+  }
+  .inner h3{
+    font-size: 1.2rem;
+    margin-bottom: 9px;
+  }
+  .inner h4{
+    font-size: 1.0rem;
+  }
+  form div label{
+    margin: 0px;
+  }
+  form > div > input[type=text]{
+    width: 30%;
+  }
 }
