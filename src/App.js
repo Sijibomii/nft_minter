@@ -13,14 +13,12 @@ function App() {
   const [name, setName]= useState("");
   const [fileUrl, setFileUrl] = useState(null)
   const [address, setAddress]= useState(null);
-  const [tokenContract, setTokenContract] = useState(null);
   useEffect(() => {
     init();
   }, [])
   const init = ()=>{
     const provider = new ethers.providers.JsonRpcProvider()
     const contract = new ethers.Contract(minterAddress, nft.abi, provider)
-    setTokenContract(contract)
   }
   const connect =async()=>{
     if(provider !== null) return
@@ -115,7 +113,7 @@ function App() {
        </div>
        {
           fileUrl && (
-            <img className="rounded mt-4" width="350" src={fileUrl} />
+            <img className="rounded mt-4" width="350" src={fileUrl} alt="uploaded image"/>
           )
         }
      </div>
