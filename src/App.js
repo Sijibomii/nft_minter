@@ -84,6 +84,7 @@ function App() {
          <h1>NFT Minting Sample Project </h1>
          <h3><a href="https://twitter.com/bigbrutha_/status/1432024777456341004">Project multivation</a></h3>
          <h4>Contract address: {minterAddress}</h4>
+         <h4>Deployed on the Rinkeby Network</h4>
          {address === null ?(
          <button className="connect" onClick={connect}>Connect your wallet</button>
          ):(
